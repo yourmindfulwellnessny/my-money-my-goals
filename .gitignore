@@ -1,0 +1,8 @@
+# Nunca subir datos de inscripciones, exportaciones ni secretos
+*.csv
+*.xlsx
+exports/
+.env
+.env.*
+!.env.example
+.DS_Store
