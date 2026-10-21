@@ -24,7 +24,8 @@ window.WORKSHOP_CONFIG = {
   registrationOpen: false,
 
   // Enlace del formulario de Jotform (se completa cuando el formulario esté listo).
-  registrationFormUrl: "",
+  // Formulario en Jotform (desactivado en Jotform hasta el lanzamiento).
+  registrationFormUrl: "https://form.jotform.com/262935586277170",
 
   // Contacto público. Deja vacío lo que no deba publicarse.
   contactEmail: "yourmindfulwellnessny@gmail.com",

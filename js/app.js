@@ -76,8 +76,8 @@
   }
 
   function withLang(url) {
-    // Jotform admite ?language=es para abrir el formulario traducido.
-    try { var u = new URL(url); u.searchParams.set("language", lang); return u.toString(); }
+    // Jotform abre la traducción con ?language=es-US (solo el idioma, nunca datos personales).
+    try { var u = new URL(url); u.searchParams.set("language", lang === "es" ? "es-US" : "en"); return u.toString(); }
     catch (e) { return url; }
   }
 
