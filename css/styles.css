@@ -60,9 +60,9 @@ h1, h2, h3, p { margin: 0; }
 /* ---------- Hero ---------- */
 .hero {
   background:
-    radial-gradient(circle at 6% 22%, var(--lime) 0 90px, transparent 91px),
-    radial-gradient(circle at 96% 8%, var(--coral) 0 26px, transparent 27px),
-    radial-gradient(circle at 94% 88%, var(--lime) 0 120px, transparent 121px),
+    radial-gradient(circle at 4% 18%, var(--lime) 0 60px, transparent 61px),
+    radial-gradient(circle at 96% 8%, var(--coral) 0 22px, transparent 23px),
+    radial-gradient(circle at 97% 92%, var(--yellow) 0 34px, transparent 35px),
     var(--purple);
   padding: 20px 0 32px;
 }
