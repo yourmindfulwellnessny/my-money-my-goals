@@ -6,8 +6,8 @@
   <title>My Money, My Goals — Kids Money Workshop | Mindful Wellness &amp; Coaching</title>
   <meta name="description" content="A hands-on money workshop for kids ages 7–13 in Wallington, NJ. Learn to save, make smart choices and reach your goals. Taught in English.">
   <meta property="og:title" content="My Money, My Goals — Kids Money Workshop">
-  <meta property="og:description" content="Ages 7–13 · 2.5 hours · In English · Wallington, NJ">
-  <meta property="og:image" content="assets/flyer-my-money-my-goals.jpg">
+  <meta property="og:description" content="Ages 7–13 · 2.5 hours · In English · Saturday, November 7, 2026 · Wallington, NJ">
+  <meta property="og:image" content="https://yourmindfulwellnessny.github.io/my-money-my-goals/assets/flyer-my-money-my-goals.jpg">
   <meta name="theme-color" content="#4a1d7a">
   <link rel="icon" href="assets/mindful-wellness-logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,11 +20,9 @@
 
   <header class="topbar">
     <div class="wrap topbar__inner">
-      <a class="brand" href="#top" aria-label="Mindful Wellness &amp; Coaching">
-        <img src="assets/mindful-wellness-logo.png" alt="Mindful Wellness by Monica V." width="1674" height="885">
-      </a>
       <nav class="nav" aria-label="Main">
         <a href="#learn" data-i18n="nav.learn">What they'll learn</a>
+        <a href="#experience" data-i18n="nav.experience">Experience</a>
         <a href="#pricing" data-i18n="nav.pricing">Pricing</a>
         <a href="#faq" data-i18n="nav.faq">FAQ</a>
       </nav>
@@ -39,25 +37,22 @@
   <main id="main">
     <!-- HERO -->
     <section class="hero" id="top">
-      <div class="blob blob--g1" aria-hidden="true"></div>
-      <div class="blob blob--p1" aria-hidden="true"></div>
-      <div class="dot dot--coral" aria-hidden="true"></div>
-      <div class="dot dot--yellow" aria-hidden="true"></div>
-
       <div class="wrap hero__head">
+        <img class="hero__logo" src="assets/mindful-wellness-logo.png" width="1674" height="885"
+             alt="Mindful Wellness by Monica V.">
         <p class="kicker" data-i18n="hero.kicker">A Mindful Money Workshop</p>
         <h1 class="title">
           <span class="title__purple" data-i18n="hero.title1">My Money,</span>
           <span class="title__green"><span data-i18n="hero.title2">My Goals</span></span>
         </h1>
         <p class="sub" data-i18n="hero.sub">Learn to Save, Make Smart Choices, Reach Your Goals.</p>
-        <p class="sub-es" data-i18n="hero.es" lang="es">In Spanish: Mi dinero, mis metas</p>
+        <p class="sub-es" lang="es" data-i18n="hero.es">Mi dinero, mis metas</p>
       </div>
 
-      <figure class="hero__photo">
-        <img src="assets/hero-kids.jpg" width="1122" height="500"
+      <figure class="hero__photo wrap">
+        <img src="assets/hero-kids.jpg" width="1122" height="500" fetchpriority="high"
              alt="Four smiling children of different backgrounds sort play money into Save, Spend and Share cards while one writes in a notebook titled My Savings Goal."
-             data-i18n-alt="hero.photoAlt" fetchpriority="high">
+             data-i18n-alt="hero.photoAlt">
       </figure>
 
       <div class="wrap hero__info">
@@ -66,56 +61,70 @@
           <li data-i18n="chip.duration">2.5 hours</li>
           <li data-i18n="chip.language">In English</li>
         </ul>
-        <p class="english-note"><span aria-hidden="true">🇺🇸</span> <strong data-i18n="hero.englishNote">The workshop is taught entirely in English.</strong></p>
-
-        <div class="when-strip">
-          <span class="js-date">—</span>
-          <span aria-hidden="true">•</span>
-          <span class="js-time">—</span>
-          <span aria-hidden="true">•</span>
+        <p class="english-note" data-i18n="hero.englishNote">The workshop is taught entirely in English.</p>
+        <p class="when-strip">
+          <span class="js-date">Saturday, November 7, 2026</span>
+          <span class="js-time">9:00 AM – 11:30 AM</span>
           <span class="js-place">Wallington, NJ</span>
-        </div>
-
+        </p>
         <div class="price-pill">
-          <p><strong>$60</strong> <span data-i18n="price.first">First child</span>
-             <span class="sep" aria-hidden="true">•</span>
-             <strong>$110</strong> <span data-i18n="price.two">Two siblings</span></p>
-          <p class="price-pill__small">$50 <span data-i18n="price.sibling">Each additional sibling</span></p>
+          <p class="price-pill__main">
+            <span class="pp"><strong>$60</strong> <span data-i18n="price.perChild">per child</span></span>
+            <span class="pp"><strong>$110</strong> <span data-i18n="price.twoSiblings">for two siblings</span></span>
+          </p>
+          <p class="price-pill__small" data-i18n="price.eachAdditional">$50 each additional sibling</p>
         </div>
-
-        <div class="cta-row">
-          <a class="btn btn--primary js-register" href="#register" data-i18n="cta.register">Register your family</a>
-          <a class="btn btn--ghost" href="#learn" data-i18n="cta.details">See the details</a>
-        </div>
+        <a class="btn btn--cta js-register" href="#register" data-i18n="cta.open">Registration open</a>
       </div>
     </section>
 
     <!-- LEARN -->
     <section class="section" id="learn" aria-labelledby="learn-title">
       <div class="wrap">
-        <h2 id="learn-title" class="h2" data-i18n="learn.title">What kids will learn</h2>
-        <p class="lead" data-i18n="learn.intro">Simple, hands-on lessons that connect money with patience, feelings and responsible choices.</p>
+        <header class="section__head">
+          <h2 id="learn-title" class="h2" data-i18n="learn.title">What kids will learn</h2>
+          <p class="lead" data-i18n="learn.intro">Simple, hands-on lessons that connect money with patience, feelings and responsible choices.</p>
+        </header>
         <ol class="cards">
-          <li class="card card--green">
-            <span class="card__icon" aria-hidden="true">🐷</span>
-            <h3 data-i18n="learn.1.t">Why saving matters</h3>
-            <p data-i18n="learn.1.d">How small amounts add up — and why waiting can be worth it.</p>
+          <li class="card">
+            <img class="card__img" loading="lazy" width="600" height="400"
+                 src="https://images.pexels.com/photos/12955547/pexels-photo-12955547.jpeg?auto=compress&cs=tinysrgb&w=800"
+                 alt="A smiling boy drops a coin into a piggy bank." data-i18n-alt="learn.1.alt">
+            <div class="card__body">
+              <span class="card__num card__num--green">01</span>
+              <h3 data-i18n="learn.1.t">Why saving matters</h3>
+              <p data-i18n="learn.1.d">How small amounts add up — and why waiting can be worth it.</p>
+            </div>
           </li>
-          <li class="card card--purple">
-            <span class="card__icon" aria-hidden="true">⚖️</span>
-            <h3 data-i18n="learn.2.t">Needs vs. wants</h3>
-            <p data-i18n="learn.2.d">Telling the difference between what we need and what we'd like to have.</p>
+          <li class="card">
+            <img class="card__img" loading="lazy" width="600" height="400"
+                 src="https://images.unsplash.com/photo-1785219419135-39c766e00b11?auto=format&fit=crop&w=800&q=70"
+                 alt="A boy looks at products in a grocery store aisle." data-i18n-alt="learn.2.alt">
+            <div class="card__body">
+              <span class="card__num card__num--purple">02</span>
+              <h3 data-i18n="learn.2.t">Needs vs. wants</h3>
+              <p data-i18n="learn.2.d">Telling the difference between what we need and what we'd like to have.</p>
+            </div>
           </li>
-          <li class="card card--yellow">
-            <span class="card__icon" aria-hidden="true">🫙</span>
-            <h3 data-i18n="learn.3.t">Save, Spend, Share</h3>
-            <p data-i18n="learn.3.d">Splitting money into three jars, each with its own purpose.</p>
-            <div class="jars" aria-hidden="true"><span class="jar jar--save">Save</span><span class="jar jar--spend">Spend</span><span class="jar jar--share">Share</span></div>
+          <li class="card">
+            <img class="card__img" loading="lazy" width="600" height="400"
+                 src="https://images.unsplash.com/photo-1704708798525-5fe58553d801?auto=format&fit=crop&w=800&q=70"
+                 alt="Two children put money into a savings jar." data-i18n-alt="learn.3.alt">
+            <div class="card__body">
+              <span class="card__num card__num--yellow">03</span>
+              <h3 data-i18n="learn.3.t">Save, Spend, Share</h3>
+              <p data-i18n="learn.3.d">Splitting money into three jars, each with its own purpose.</p>
+            </div>
           </li>
-          <li class="card card--coral">
-            <span class="card__icon" aria-hidden="true">🎯</span>
-            <h3 data-i18n="learn.4.t">A goal and a 30-day plan</h3>
-            <p data-i18n="learn.4.d">Choosing one goal and making a simple 30-day savings plan.</p>
+          <li class="card">
+            <img class="card__img" loading="lazy" width="600" height="400"
+                 src="https://images.pexels.com/photos/7118205/pexels-photo-7118205.jpeg?auto=compress&cs=tinysrgb&w=800"
+                 alt="A child counts coins next to a jar labeled with a savings goal." data-i18n-alt="learn.4.alt">
+            <div class="card__body">
+              <span class="card__num card__num--coral">04</span>
+              <h3 data-i18n="learn.4.t">A goal and a 30-day plan</h3>
+              <p data-i18n="learn.4.d">Choosing one goal and making a simple 30-day savings plan.</p>
+            </div>
           </li>
         </ol>
         <p class="note" data-i18n="learn.feelings">We also talk about patience and the emotions we feel when we shop, so kids can make calmer, more confident decisions.</p>
@@ -125,85 +134,117 @@
     <!-- EXPERIENCE -->
     <section class="section section--purple" id="experience" aria-labelledby="exp-title">
       <div class="wrap">
-        <h2 id="exp-title" class="h2 h2--light" data-i18n="exp.title">What the experience looks like</h2>
+        <header class="section__head">
+          <h2 id="exp-title" class="h2 h2--light" data-i18n="exp.title">What the experience looks like</h2>
+        </header>
         <div class="exp">
-          <div class="exp__item">
-            <span class="exp__icon" aria-hidden="true">🎲</span>
-            <h3 data-i18n="exp.1.t">Games</h3>
-            <p data-i18n="exp.1.d">Active, playful games that make money ideas easy to remember.</p>
-          </div>
-          <div class="exp__item">
-            <span class="exp__icon" aria-hidden="true">🛒</span>
-            <h3 data-i18n="exp.2.t">Pretend store</h3>
-            <p data-i18n="exp.2.d">Kids shop with play money and practice choosing between needs and wants.</p>
-          </div>
-          <div class="exp__item">
-            <span class="exp__icon" aria-hidden="true">👫</span>
-            <h3 data-i18n="exp.3.t">Activities by age</h3>
-            <p data-i18n="exp.3.d">Two groups so every child learns at the right level:</p>
-            <p class="groups"><span data-i18n="exp.groupA">Ages 7–9</span><span data-i18n="exp.groupB">Ages 10–13</span></p>
-          </div>
+          <article class="exp__item">
+            <img class="exp__img" loading="lazy" width="600" height="400"
+                 src="https://images.pexels.com/photos/7352882/pexels-photo-7352882.jpeg?auto=compress&cs=tinysrgb&w=800"
+                 alt="Two children of different backgrounds play and learn together." data-i18n-alt="exp.1.alt">
+            <div class="exp__body">
+              <h3 data-i18n="exp.1.t">Games</h3>
+              <p data-i18n="exp.1.d">Active, playful games that make money ideas easy to remember.</p>
+            </div>
+          </article>
+          <article class="exp__item">
+            <img class="exp__img" loading="lazy" width="600" height="400"
+                 src="https://images.unsplash.com/photo-1787706369014-cd52f8b37a6a?auto=format&fit=crop&w=800&q=70"
+                 alt="Children choose items at a shop table." data-i18n-alt="exp.2.alt">
+            <div class="exp__body">
+              <h3 data-i18n="exp.2.t">Pretend store</h3>
+              <p data-i18n="exp.2.d">Kids shop with play money and practice choosing between needs and wants.</p>
+            </div>
+          </article>
+          <article class="exp__item exp__item--groups">
+            <div class="exp__body">
+              <h3 data-i18n="exp.3.t">Activities by age</h3>
+              <p data-i18n="exp.3.d">Two groups so every child learns at the right level:</p>
+              <div class="age-groups">
+                <div class="age-group age-group--green"><span class="age-group__n" data-i18n="exp.groupA.n">7–9</span><span data-i18n="exp.groupA.l">years old</span></div>
+                <div class="age-group age-group--yellow"><span class="age-group__n" data-i18n="exp.groupB.n">10–13</span><span data-i18n="exp.groupB.l">years old</span></div>
+              </div>
+            </div>
+          </article>
         </div>
       </div>
     </section>
 
-    <!-- INCLUDES + TEAM -->
-    <section class="section" aria-labelledby="inc-title">
-      <div class="wrap two-col">
+    <!-- DETAILS: includes + when -->
+    <section class="section" id="when" aria-labelledby="when-title">
+      <div class="wrap details">
         <div class="panel">
-          <h2 id="inc-title" class="h2 h2--sm" data-i18n="inc.title">Registration includes</h2>
-          <ul class="checks">
+          <h2 id="when-title" class="h2 h2--sm" data-i18n="when.title">Date, time &amp; place</h2>
+          <dl class="facts">
+            <div><dt data-i18n="when.date">Date</dt><dd class="js-date">Saturday, November 7, 2026</dd></div>
+            <div><dt data-i18n="when.time">Time</dt><dd class="js-time">9:00 AM – 11:30 AM</dd></div>
+            <div><dt data-i18n="when.place">Place</dt><dd class="js-place">Wallington, NJ</dd></div>
+          </dl>
+          <p class="muted small" data-i18n="when.placeNote">The exact address is shared privately with registered families.</p>
+          <p class="muted small js-capacity" data-i18n="when.capacity">Limited to 14 children in total.</p>
+        </div>
+        <div class="panel">
+          <h2 class="h2 h2--sm" data-i18n="inc.title">Registration includes</h2>
+          <ul class="includes">
             <li data-i18n="inc.1">All workshop materials</li>
             <li data-i18n="inc.2">Snack</li>
             <li data-i18n="inc.3">2.5 hours of guided, hands-on learning</li>
           </ul>
         </div>
-        <div class="panel">
-          <h2 class="h2 h2--sm" data-i18n="team.title">Your team</h2>
-          <dl class="team">
-            <div><dt data-i18n="team.facilitators">Facilitators</dt><dd>Mónica · Jessica</dd></div>
-            <div><dt data-i18n="team.logistics">Logistics</dt><dd>Andrea</dd></div>
-          </dl>
-          <p class="muted" data-i18n="team.org">Organized by Mindful Wellness &amp; Coaching</p>
-        </div>
       </div>
     </section>
 
-    <!-- WHEN / WHERE -->
-    <section class="section section--cream2" id="when" aria-labelledby="when-title">
+    <!-- TEAM -->
+    <section class="section section--cream2" id="team" aria-labelledby="team-title">
       <div class="wrap">
-        <h2 id="when-title" class="h2" data-i18n="when.title">Date, time &amp; place</h2>
-        <dl class="facts">
-          <div class="fact"><dt data-i18n="when.date">Date</dt><dd class="js-date">—</dd></div>
-          <div class="fact"><dt data-i18n="when.time">Time</dt><dd class="js-time">—</dd></div>
-          <div class="fact"><dt data-i18n="when.place">Place</dt><dd class="js-place">Wallington, NJ</dd></div>
-        </dl>
-        <p class="muted" data-i18n="when.placeNote">The exact address is shared privately with registered families.</p>
-        <p class="muted js-capacity" data-i18n="when.capacity">Limited to 14 children in total.</p>
+        <header class="section__head">
+          <h2 id="team-title" class="h2" data-i18n="team.title">Your team</h2>
+          <p class="lead" data-i18n="team.org">Organized by Mindful Wellness &amp; Coaching</p>
+        </header>
+        <ul class="team">
+          <li class="person">
+            <img class="person__photo" src="assets/team-monica.jpg" width="600" height="600" loading="lazy" alt="Mónica Villalba">
+            <p class="person__name">Mónica</p>
+            <p class="person__role" data-i18n="team.facilitator">Facilitator</p>
+          </li>
+          <li class="person">
+            <div class="person__photo person__photo--pending" role="img" aria-label="Jessica — photo coming soon"><span>J</span></div>
+            <p class="person__name">Jessica</p>
+            <p class="person__role" data-i18n="team.facilitator">Facilitator</p>
+          </li>
+          <li class="person">
+            <div class="person__photo person__photo--pending" role="img" aria-label="Andrea — photo coming soon"><span>A</span></div>
+            <p class="person__name">Andrea</p>
+            <p class="person__role" data-i18n="team.logistics">Logistics</p>
+          </li>
+        </ul>
       </div>
     </section>
 
     <!-- PRICING -->
     <section class="section" id="pricing" aria-labelledby="price-title">
       <div class="wrap">
-        <h2 id="price-title" class="h2" data-i18n="price.title">Pricing</h2>
-        <div class="prices">
-          <div class="price price--yellow"><span class="price__amt">$60</span><span data-i18n="price.first">First child</span></div>
-          <div class="price price--green"><span class="price__amt">$50</span><span data-i18n="price.sibling">Each additional sibling</span></div>
-          <div class="price price--purple"><span class="price__amt">$110</span><span data-i18n="price.two">Two siblings</span></div>
-          <div class="price price--coral"><span class="price__amt">$160</span><span data-i18n="price.three">Three siblings</span></div>
-        </div>
-
-        <div class="calc">
-          <h3 data-i18n="price.calc">Quick calculator</h3>
-          <label for="kids" data-i18n="price.calcLabel">Number of children in your family</label>
-          <div class="stepper">
-            <button type="button" class="stepper__btn" data-step="-1" aria-label="−1">−</button>
-            <input id="kids" type="number" inputmode="numeric" min="1" max="6" value="1" aria-describedby="calc-total">
-            <button type="button" class="stepper__btn" data-step="1" aria-label="+1">+</button>
+        <header class="section__head">
+          <h2 id="price-title" class="h2" data-i18n="price.title">Pricing</h2>
+          <p class="lead" data-i18n="price.formula">$60 for the first child + $50 for each additional sibling.</p>
+        </header>
+        <div class="pricing">
+          <div class="prices">
+            <div class="price price--yellow"><span class="price__amt">$60</span><span data-i18n="price.one">1 child</span></div>
+            <div class="price price--purple"><span class="price__amt">$110</span><span data-i18n="price.two">2 siblings</span></div>
+            <div class="price price--green"><span class="price__amt">$160</span><span data-i18n="price.three">3 siblings</span></div>
           </div>
-          <p id="calc-total" class="calc__total" aria-live="polite"><span data-i18n="price.total">Estimated total</span>: <strong class="js-total">$60</strong></p>
-          <p class="muted small" data-i18n="price.note">Final total is calculated and confirmed in the secure registration form.</p>
+          <div class="calc">
+            <label for="kids" data-i18n="price.calcLabel">Number of children in your family</label>
+            <div class="calc__row">
+              <div class="stepper">
+                <button type="button" class="stepper__btn" data-step="-1" aria-label="Remove one child">−</button>
+                <input id="kids" type="number" inputmode="numeric" min="1" max="6" value="1" aria-describedby="calc-total">
+                <button type="button" class="stepper__btn" data-step="1" aria-label="Add one child">+</button>
+              </div>
+              <p id="calc-total" class="calc__total" aria-live="polite"><span data-i18n="price.total">Total</span>: <strong class="js-total">$60</strong></p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -213,13 +254,13 @@
       <div class="wrap narrow">
         <h2 id="faq-title" class="h2" data-i18n="faq.title">Frequently asked questions</h2>
         <div class="faq">
-          <details><summary data-i18n="faq.1.q">What language is the workshop in?</summary><p data-i18n="faq.1.a"></p></details>
-          <details><summary data-i18n="faq.2.q">Who can attend?</summary><p data-i18n="faq.2.a"></p></details>
-          <details><summary data-i18n="faq.3.q">How does the sibling discount work?</summary><p data-i18n="faq.3.a"></p></details>
-          <details><summary data-i18n="faq.4.q">My child has allergies. What should I do?</summary><p data-i18n="faq.4.a"></p></details>
-          <details><summary data-i18n="faq.5.q">Who fills out the registration?</summary><p data-i18n="faq.5.a"></p></details>
-          <details><summary data-i18n="faq.6.q">When is my spot confirmed?</summary><p data-i18n="faq.6.a"></p></details>
-          <details><summary data-i18n="faq.7.q">What is the cancellation policy?</summary><p data-i18n="faq.7.a"></p></details>
+          <details open><summary data-i18n="faq.ages.q">What ages is the workshop for?</summary><div class="faq__a"><p data-i18n="faq.ages.a"></p><ul class="faq__groups"><li data-i18n="faq.ages.g1"></li><li data-i18n="faq.ages.g2"></li></ul></div></details>
+          <details><summary data-i18n="faq.lang.q">What language is the workshop in?</summary><div class="faq__a"><p data-i18n="faq.lang.a"></p></div></details>
+          <details><summary data-i18n="faq.sib.q">How does the sibling discount work?</summary><div class="faq__a"><p data-i18n="faq.sib.a"></p></div></details>
+          <details><summary data-i18n="faq.cancel.q">What is the cancellation policy?</summary><div class="faq__a"><p data-i18n="faq.cancel.a1"></p><p data-i18n="faq.cancel.a2"></p><p data-i18n="faq.cancel.a3"></p></div></details>
+          <details><summary data-i18n="faq.allergy.q">My child has allergies. What should I do?</summary><div class="faq__a"><p data-i18n="faq.allergy.a"></p></div></details>
+          <details><summary data-i18n="faq.who.q">Who fills out the registration?</summary><div class="faq__a"><p data-i18n="faq.who.a"></p></div></details>
+          <details><summary data-i18n="faq.confirm.q">When is my spot confirmed?</summary><div class="faq__a"><p data-i18n="faq.confirm.a"></p></div></details>
         </div>
       </div>
     </section>
@@ -228,28 +269,27 @@
     <section class="section section--purple" id="register" aria-labelledby="reg-title">
       <div class="wrap narrow center">
         <h2 id="reg-title" class="h2 h2--light" data-i18n="reg.title">Registration</h2>
-        <div class="reg js-reg-closed">
-          <p class="reg__badge" data-i18n="reg.closedTitle">Registration opens soon</p>
-          <p data-i18n="reg.closedText">We're preparing the secure registration form.</p>
+        <div class="js-reg-open" hidden>
+          <p class="reg__text" data-i18n="reg.openText">One adult registers the whole family in a few short steps.</p>
+          <p class="reg__text reg__text--small" data-i18n="reg.payNote">After you submit, we will contact you with payment instructions. Your spot is confirmed once payment is received.</p>
+          <a class="btn btn--cta js-form-link" href="#" target="_blank" rel="noopener" data-i18n="cta.open">Registration open</a>
         </div>
-        <div class="reg js-reg-open" hidden>
-          <p data-i18n="reg.openText">One adult registers the whole family.</p>
-          <a class="btn btn--yellow js-form-link" href="#" rel="noopener" data-i18n="reg.button">Open the registration form</a>
+        <div class="js-reg-closed">
+          <p class="reg__text" data-i18n="reg.closedText">Registration will open soon.</p>
         </div>
       </div>
     </section>
 
     <!-- CONTACT + PRIVACY -->
     <section class="section" id="contact" aria-labelledby="contact-title">
-      <div class="wrap two-col">
+      <div class="wrap details">
         <div>
           <h2 id="contact-title" class="h2 h2--sm" data-i18n="contact.title">Contact</h2>
           <ul class="contact js-contact"></ul>
         </div>
         <div>
           <h2 class="h2 h2--sm" data-i18n="privacy.title">Privacy notice</h2>
-          <p class="pending" data-i18n="privacy.pending">Draft — pending approval by the organizer.</p>
-          <p class="muted" data-i18n="privacy.text"></p>
+          <p class="muted small" data-i18n="privacy.text"></p>
         </div>
       </div>
     </section>
@@ -258,12 +298,13 @@
   <footer class="footer">
     <div class="wrap footer__inner">
       <img src="assets/mindful-wellness-logo.png" alt="Mindful Wellness by Monica V." width="1674" height="885" loading="lazy">
-      <p><strong>Mindful Wellness &amp; Coaching</strong><br><span data-i18n="footer.by">by Mónica Villalba</span></p>
-      <p class="small">© <span class="js-year">2026</span> <span data-i18n="footer.rights">Mindful Wellness &amp; Coaching LLC</span></p>
+      <p><strong>Mindful Wellness &amp; Coaching</strong> · <span data-i18n="footer.by">by Mónica Villalba</span></p>
+      <p class="credits" data-i18n-html="footer.credits"></p>
+      <p class="small">© <span class="js-year">2026</span> Mindful Wellness &amp; Coaching LLC</p>
     </div>
   </footer>
 
-  <a class="sticky-cta js-register" href="#register" data-i18n="cta.register">Register your family</a>
+  <a class="sticky-cta js-register" href="#register" data-i18n="cta.open">Registration open</a>
 
   <script src="js/config.js"></script>
   <script src="js/i18n.js"></script>

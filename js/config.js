@@ -21,7 +21,8 @@ window.WORKSHOP_CONFIG = {
 
   // Inscripción: mantener en false hasta que el pago (Stripe), las condiciones de
   // cancelación y el aviso de privacidad estén aprobados y conectados.
-  registrationOpen: false,
+  // Abierta como solicitudes (el pago se coordina después de recibir la inscripción).
+  registrationOpen: true,
 
   // Enlace del formulario de Jotform (se completa cuando el formulario esté listo).
   // Formulario en Jotform (desactivado en Jotform hasta el lanzamiento).

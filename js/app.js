@@ -44,6 +44,10 @@
       var v = t(el.getAttribute("data-i18n"));
       if (v) el.textContent = v;
     });
+    // Solo textos propios de i18n.js (créditos con enlaces); nunca contenido de usuarios.
+    document.querySelectorAll("[data-i18n-html]").forEach(function (el) {
+      el.innerHTML = t(el.getAttribute("data-i18n-html"));
+    });
     document.querySelectorAll("[data-i18n-alt]").forEach(function (el) {
       el.alt = t(el.getAttribute("data-i18n-alt"));
     });
@@ -61,9 +65,11 @@
     var open = !!(C.registrationOpen && C.registrationFormUrl);
     document.querySelector(".js-reg-closed").hidden = open;
     document.querySelector(".js-reg-open").hidden = !open;
-    if (open) document.querySelector(".js-form-link").href = withLang(C.registrationFormUrl);
-    document.querySelectorAll(".js-register").forEach(function (a) {
-      a.textContent = open ? t("cta.register") : t("cta.soon");
+    var formHref = open ? withLang(C.registrationFormUrl) : "#register";
+    document.querySelectorAll(".js-form-link, .js-register").forEach(function (a) {
+      a.textContent = open ? t("cta.open") : t("cta.soon");
+      a.href = formHref;
+      if (open) { a.target = "_blank"; a.rel = "noopener"; } else { a.removeAttribute("target"); }
       a.classList.toggle("is-soon", !open);
     });
 

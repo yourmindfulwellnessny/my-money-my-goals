@@ -3,7 +3,7 @@
 Página pública de lanzamiento del taller infantil **My Money, My Goals / Mi dinero, mis metas** de Mindful Wellness & Coaching.
 
 - **Página (GitHub Pages):** https://yourmindfulwellnessny.github.io/my-money-my-goals/
-- **Formulario de inscripción (Jotform):** https://form.jotform.com/262935586277170 — **desactivado** hasta el lanzamiento.
+- **Formulario de inscripción (Jotform):** https://form.jotform.com/262935586277170 — **abierto como solicitudes** desde el 21 oct 2026 (el pago se coordina después).
 
 ## Arquitectura
 
@@ -33,15 +33,27 @@ assets/             Logo oficial (sin modificar, solo recortado el margen blanco
 2. Haz commit y push a la rama `main`.
 3. GitHub Pages publica automáticamente en 1–2 minutos (Settings → Pages: "Deploy from a branch", `main` / root).
 
-## Cómo abrir las inscripciones (checklist de lanzamiento)
+## Política de cancelación (aprobada por la organizadora)
+
+- Avisar con un mínimo de 24 horas de anticipación al inicio del taller.
+- No se realizan reembolsos.
+- Con aviso de al menos 24 horas, el niño recibe un crédito para una actividad similar de Mindful Wellness.
+- Avisos con menos de 24 horas o inasistencia sin aviso no generan crédito.
+
+Aparece en la página (preguntas frecuentes) y en el paso 6 del formulario, en inglés y español.
+
+## Fotos
+
+- Portada: fotografía del flyer aprobado, completa (sin recortes de caras).
+- Secciones: fotos reales con licencia gratuita de Pexels y Unsplash, enlazadas desde sus servidores, con crédito a cada fotógrafo en el pie de página.
+- Equipo: foto de Mónica (`assets/team-monica.jpg`). Para agregar a Jessica y Andrea: guardar `assets/team-jessica.jpg` y `assets/team-andrea.jpg` (cuadradas, mínimo 600×600) y reemplazar el bloque `person__photo--pending` en `index.html` por una etiqueta `<img>` igual a la de Mónica.
+
+## Pago con Stripe (siguiente paso)
 
 1. **Stripe:** en Jotform → Build → agregar el elemento *Stripe* → conectar la cuenta de Stripe → configurar el cobro con el total calculado (`totalDue`) o con productos "Primer niño $60" + "Hermano adicional $50". Probar en modo de prueba de Stripe.
-2. **Textos legales:** reemplazar los marcadores `[PENDING]` del paso 6 (condiciones de cancelación y aviso de privacidad) con el texto aprobado, en inglés y en español (Settings → Form Languages). Actualizar también el aviso de privacidad de la página (`privacy.text` y `privacy.pending` en `js/i18n.js`).
+2. **Aviso de privacidad:** el texto actual describe cómo se guardan los datos; confirmar que la organizadora lo aprueba.
 3. **Cupo:** decidir qué estados ocupan cupo y cuánto dura una reserva pendiente (ver "Cupos" abajo).
 4. **Plan de Jotform:** el plan gratis permite **10 envíos con pago al mes** y 100 envíos al mes. Para 14 niños con pago en línea probablemente se necesita el plan Bronze.
-5. Borrar los envíos de prueba en Jotform.
-6. En Jotform → Settings → Form Status: **Enabled**.
-7. En `js/config.js`: `registrationOpen: true` → commit y push.
 
 ## Cupos (máximo 14 niños en total)
 
