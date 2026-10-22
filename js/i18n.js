@@ -213,7 +213,7 @@
       "faq.sib.q": "¿Cómo funciona el descuento para hermanos?",
       "faq.sib.a": "El primer niño paga $60 y cada hermano adicional $50: dos hermanos pagan $110 y tres hermanos pagan $160.",
       "faq.cancel.q": "¿Cuál es la política de cancelación?",
-      "faq.cancel.a1": "Si tu hijo no puede asistir, avísanos con un mínimo de 24 horas de anticipación al inicio del taller.",
+      "faq.cancel.a1": "Si tu hijo no puede asistir, avísanos al menos 24 horas antes del inicio del taller.",
       "faq.cancel.a2": "No se realizan reembolsos. Si nos avisas con al menos 24 horas de anticipación, tu hijo recibirá un crédito para una actividad similar de Mindful Wellness.",
       "faq.cancel.a3": "Las cancelaciones con menos de 24 horas de anticipación o la inasistencia sin aviso no generan crédito.",
       "faq.allergy.q": "Mi hijo tiene alergias. ¿Qué hago?",
@@ -231,7 +231,7 @@
       "contact.title": "Contacto",
       "contact.email": "Correo",
       "privacy.title": "Aviso de privacidad",
-      "privacy.text": "La información que compartes en el formulario de inscripción se usa solo para organizar este taller y cuidar a tus hijos durante el mismo. Se guarda de forma privada en la cuenta de inscripciones de Mindful Wellness & Coaching, solo la ve el equipo del taller y nunca se publica en esta página.",
+      "privacy.text": "La información que compartes en el formulario de inscripción se usa solo para organizar este taller y cuidar a tus hijos durante el taller. Se guarda de forma privada en la cuenta de inscripciones de Mindful Wellness & Coaching, solo la ve el equipo del taller y nunca se publica en esta página.",
       "footer.by": "por Mónica Villalba",
       "footer.credits": credits.es
     }

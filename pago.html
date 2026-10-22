@@ -52,22 +52,22 @@
       <img src="assets/mindful-wellness-logo.png" width="1674" height="885" alt="Mindful Wellness by Monica V.">
       <span class="ok" data-t="received">Solicitud de inscripción recibida</span>
       <h1 data-t="title">Último paso: el pago</h1>
-      <p data-t="intro">Tu cupo para My Money, My Goals queda confirmado cuando recibimos el pago. Elige cómo pagar.</p>
+      <p data-t="intro">Tu cupo para My Money, My Goals quedará confirmado cuando recibamos el pago. Elige cómo pagar.</p>
     </section>
 
     <section class="pay-card">
       <div class="summary">
         <div><span data-t="workshop">Taller</span><strong>My Money, My Goals</strong></div>
-        <div><span data-t="when">Fecha</span><strong data-t="date">Sáb. 7 de nov. 2026 · 9:00–11:30 a. m.</strong></div>
+        <div><span data-t="when">Fecha</span><strong data-t="date">Sábado 7 de noviembre de 2026 · 9:00–11:30 a. m.</strong></div>
         <div><span data-t="kids">Niños inscritos</span><strong class="js-n">1</strong></div>
         <div class="total"><span data-t="total">Total</span><strong class="js-total">$60</strong></div>
       </div>
-      <p class="warn js-big" hidden data-t="big">Para más de 4 hermanos, escríbenos y te ayudamos con el pago.</p>
+      <p class="warn js-big" hidden data-t="big">Si inscribes a más de 4 hermanos, escríbenos y te ayudaremos con el pago.</p>
 
       <div class="methods js-methods">
         <article class="method">
           <h2 data-t="cardT">Tarjeta</h2>
-          <p data-t="cardD">Pago seguro con Stripe: tarjeta de crédito o débito, Apple Pay y otros. Recibirás el recibo por correo.</p>
+          <p data-t="cardD">Pago seguro con Stripe: tarjeta de crédito o débito, Apple Pay y otros medios. Recibirás el recibo por correo electrónico.</p>
           <a class="btn btn--cta btn--full js-card" href="#" rel="noopener" data-t="cardBtn">Pagar con tarjeta</a>
         </article>
 
@@ -80,9 +80,9 @@
             <b class="js-code">MMMG</b>
             <button type="button" class="copy js-copy" data-t="copy">Copiar</button>
           </div>
-          <p class="fine" data-t="memo">Escribe este código en la nota del Zelle para que encontremos tu pago.</p>
+          <p class="fine" data-t="memo">Escribe este código en la nota (memo) de Zelle para que podamos identificar tu pago.</p>
           <a class="btn btn--wa btn--full js-wa" href="#" target="_blank" rel="noopener" data-t="waBtn">Ya pagué · Enviar comprobante por WhatsApp</a>
-          <p class="fine" data-t="waNote">Mindful Wellness verifica el Zelle en el banco y te confirma el cupo.</p>
+          <p class="fine" data-t="waNote">Mindful Wellness verificará el pago de Zelle en el banco y te confirmará el cupo.</p>
         </article>
       </div>
     </section>
@@ -96,15 +96,15 @@
     var C = window.PAGO_CONFIG;
     var T = {
       es: { received: "Solicitud de inscripción recibida", title: "Último paso: el pago",
-        intro: "Tu cupo para My Money, My Goals queda confirmado cuando recibimos el pago. Elige cómo pagar.",
-        workshop: "Taller", when: "Fecha", date: "Sáb. 7 de nov. 2026 · 9:00–11:30 a. m.", kids: "Niños inscritos", total: "Total",
-        big: "Para más de 4 hermanos, escríbenos y te ayudamos con el pago.",
-        cardT: "Tarjeta", cardD: "Pago seguro con Stripe: tarjeta de crédito o débito, Apple Pay y otros. Recibirás el recibo por correo.",
+        intro: "Tu cupo para My Money, My Goals quedará confirmado cuando recibamos el pago. Elige cómo pagar.",
+        workshop: "Taller", when: "Fecha", date: "Sábado 7 de noviembre de 2026 · 9:00–11:30 a. m.", kids: "Niños inscritos", total: "Total",
+        big: "Si inscribes a más de 4 hermanos, escríbenos y te ayudaremos con el pago.",
+        cardT: "Tarjeta", cardD: "Pago seguro con Stripe: tarjeta de crédito o débito, Apple Pay y otros medios. Recibirás el recibo por correo electrónico.",
         cardBtn: "Pagar con tarjeta", zelleSend: "Envía el total a", zelleAt: "al", code: "Tu código de pago", copy: "Copiar", copied: "Copiado",
-        memo: "Escribe este código en la nota del Zelle para que encontremos tu pago.",
-        waBtn: "Ya pagué · Enviar comprobante por WhatsApp", waNote: "Mindful Wellness verifica el Zelle en el banco y te confirma el cupo.",
+        memo: "Escribe este código en la nota (memo) de Zelle para que podamos identificar tu pago.",
+        waBtn: "Ya pagué · Enviar comprobante por WhatsApp", waNote: "Mindful Wellness verificará el pago de Zelle en el banco y te confirmará el cupo.",
         english: "El taller se imparte completamente en inglés.",
-        waMsg: function (code, n, t) { return "Hola Monica 💜 Acabo de pagar por Zelle la inscripción de My Money, My Goals.\nCódigo: " + code + "\nNiños: " + n + "\nTotal: $" + t + "\nTe adjunto el comprobante 👇"; } },
+        waMsg: function (code, n, t) { return "Hola, Mónica 💜 Acabo de pagar por Zelle la inscripción a My Money, My Goals.\nCódigo: " + code + "\nNiños: " + n + "\nTotal: $" + t + "\nAdjunto el comprobante 👇"; } },
       en: { received: "Registration request received", title: "Last step: payment",
         intro: "Your spot for My Money, My Goals is confirmed once we receive payment. Choose how to pay.",
         workshop: "Workshop", when: "Date", date: "Sat., Nov. 7, 2026 · 9:00–11:30 AM", kids: "Children registered", total: "Total",
@@ -125,7 +125,8 @@
     var code = C.prefijo + "-" + (ref ? ref.slice(-6) : Math.random().toString(36).slice(2, 8).toUpperCase());
     var total = C.totals[n];
     var qlang = (q.get("lang") || "").toLowerCase();
-    var lang = qlang.indexOf("en") === 0 ? "en" : (qlang.indexOf("es") === 0 ? "es" : ((navigator.language || "es").toLowerCase().indexOf("en") === 0 ? "en" : "es"));
+    // Español por defecto; inglés solo si se pide con ?lang=en o con el botón EN.
+    var lang = qlang.indexOf("en") === 0 ? "en" : "es";
 
     function render() {
       var t = T[lang];
