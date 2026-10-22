@@ -78,6 +78,7 @@
       "team.title": "Your team",
       "team.org": "Organized by Mindful Wellness & Coaching",
       "team.facilitator": "Facilitator",
+      "team.cofacilitator": "Co-facilitator",
       "team.logistics": "Logistics",
 
       "price.title": "Pricing",
@@ -195,6 +196,7 @@
       "team.title": "Nuestro equipo",
       "team.org": "Organiza Mindful Wellness & Coaching",
       "team.facilitator": "Facilitadora",
+      "team.cofacilitator": "Co-facilitadora",
       "team.logistics": "Logística",
 
       "price.title": "Precios",

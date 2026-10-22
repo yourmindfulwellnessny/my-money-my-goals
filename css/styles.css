@@ -238,3 +238,7 @@ h1, h2, h3, p { margin: 0; }
 .reg__langbtns { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-bottom: 12px; }
 .btn--lang { background: var(--white); color: var(--purple); border: 2px solid var(--white); min-width: 220px; }
 .btn--lang:hover { background: transparent; color: var(--white); }
+
+/* Foto encuadrada sin modificar el archivo original */
+.person__photo--frame { overflow: hidden; }
+.person__photo--frame img { display: block; width: 100%; height: 100%; object-fit: cover; }
