@@ -72,6 +72,9 @@
       if (open) { a.target = "_blank"; a.rel = "noopener"; } else { a.removeAttribute("target"); }
       a.classList.toggle("is-soon", !open);
     });
+    document.querySelectorAll(".js-form-lang").forEach(function (a) {
+      a.href = open ? withLang(C.registrationFormUrl, a.dataset.formLang) : "#register";
+    });
 
     var ul = document.querySelector(".js-contact");
     ul.innerHTML = "";
@@ -81,9 +84,10 @@
     updateCalc();
   }
 
-  function withLang(url) {
+  function withLang(url, forced) {
     // Jotform abre la traducción con ?language=es-US (solo el idioma, nunca datos personales).
-    try { var u = new URL(url); u.searchParams.set("language", lang === "es" ? "es-US" : "en"); return u.toString(); }
+    var l = forced || lang;
+    try { var u = new URL(url); u.searchParams.set("language", l === "es" ? "es-US" : "en"); return u.toString(); }
     catch (e) { return url; }
   }
 

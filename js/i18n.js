@@ -112,6 +112,8 @@
       "reg.openText": "One adult registers the whole family in a few short steps.",
       "reg.payNote": "After you submit, you will see the payment options: card or Zelle. Your spot is confirmed once payment is received.",
       "reg.closedText": "Registration will open soon.",
+      "reg.formLang": "The form is available in English and Spanish. Choose your language:",
+      "reg.switchNote": "You can also switch between English and Spanish at the top of the form.",
 
       "contact.title": "Contact",
       "contact.email": "Email",
@@ -227,6 +229,8 @@
       "reg.openText": "Un adulto inscribe a toda la familia en pocos pasos.",
       "reg.payNote": "Al enviar el formulario verás las opciones de pago: tarjeta o Zelle. El cupo queda confirmado cuando recibimos el pago.",
       "reg.closedText": "Las inscripciones abrirán muy pronto.",
+      "reg.formLang": "El formulario está disponible en inglés y en español. Elige el idioma:",
+      "reg.switchNote": "También puedes cambiar entre inglés y español en la parte de arriba del formulario.",
 
       "contact.title": "Contacto",
       "contact.email": "Correo",
