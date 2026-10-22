@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pago · My Money, My Goals</title>
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#4a1d7a">
+  <link rel="icon" href="assets/mindful-wellness-logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .pay-wrap { max-width: 720px; margin: 0 auto; padding: 24px 16px 48px; display: grid; gap: 18px; }
+    .pay-card { background: var(--white); border-radius: 28px; box-shadow: var(--shadow); padding: 24px 20px; display: grid; gap: 14px; }
+    .pay-head { text-align: center; display: grid; gap: 8px; justify-items: center; }
+    .pay-head img { width: clamp(150px, 34vw, 200px); }
+    .pay-head h1 { font-family: var(--font-fun); color: var(--purple); font-size: clamp(1.7rem, 6vw, 2.3rem); margin: 0; line-height: 1.1; }
+    .ok { background: var(--lime-soft); color: var(--green); font-weight: 800; border-radius: 999px; padding: 6px 14px; }
+    .summary { display: grid; gap: 6px; background: var(--cream); border-radius: 18px; padding: 14px 16px; }
+    .summary div { display: flex; justify-content: space-between; gap: 12px; }
+    .summary strong { font-family: var(--font-fun); color: var(--purple); }
+    .total strong { font-size: 1.7rem; color: var(--green); }
+    .methods { display: grid; gap: 14px; grid-template-columns: 1fr; }
+    @media (min-width: 680px) { .methods { grid-template-columns: 1fr 1fr; } }
+    .method { border: 2px solid #ecdcf3; border-radius: 22px; padding: 18px; display: grid; gap: 10px; align-content: start; }
+    .method h2 { font-family: var(--font-fun); color: var(--purple); font-size: 1.35rem; margin: 0; }
+    .method p { margin: 0; }
+    .btn--full { width: 100%; }
+    .zelle-qr { width: 170px; margin: 0 auto; border-radius: 14px; background: #fff; }
+    .code { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; background: var(--cream-2); border-radius: 14px; padding: 10px 14px; }
+    .code b { font: 700 1.3rem var(--font-fun); color: var(--purple); letter-spacing: .04em; }
+    .copy { border: 0; background: var(--purple); color: #fff; font: 800 .9rem var(--font-body); padding: 8px 14px; border-radius: 999px; cursor: pointer; }
+    .btn--wa { background: #25D366; color: #073B1E; }
+    .fine { font-size: .92rem; color: var(--muted); margin: 0; }
+    .js-zphone { white-space: nowrap; }
+    .warn { background: #fdeee0; color: #7a3d00; border-radius: 14px; padding: 12px 14px; font-weight: 700; }
+    .lang-row { display: flex; justify-content: flex-end; }
+  </style>
+</head>
+<body>
+  <main class="pay-wrap">
+    <div class="lang-row">
+      <div class="lang" role="group" aria-label="Idioma / Language" style="background:var(--purple)">
+        <button type="button" class="lang__btn" data-lang="es" aria-pressed="true">ES</button>
+        <button type="button" class="lang__btn" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+    </div>
+
+    <section class="pay-card pay-head">
+      <img src="assets/mindful-wellness-logo.png" width="1674" height="885" alt="Mindful Wellness by Monica V.">
+      <span class="ok" data-t="received">Solicitud de inscripción recibida</span>
+      <h1 data-t="title">Último paso: el pago</h1>
+      <p data-t="intro">Tu cupo para My Money, My Goals queda confirmado cuando recibimos el pago. Elige cómo pagar.</p>
+    </section>
+
+    <section class="pay-card">
+      <div class="summary">
+        <div><span data-t="workshop">Taller</span><strong>My Money, My Goals</strong></div>
+        <div><span data-t="when">Fecha</span><strong data-t="date">Sáb. 7 de nov. 2026 · 9:00–11:30 a. m.</strong></div>
+        <div><span data-t="kids">Niños inscritos</span><strong class="js-n">1</strong></div>
+        <div class="total"><span data-t="total">Total</span><strong class="js-total">$60</strong></div>
+      </div>
+      <p class="warn js-big" hidden data-t="big">Para más de 4 hermanos, escríbenos y te ayudamos con el pago.</p>
+
+      <div class="methods js-methods">
+        <article class="method">
+          <h2 data-t="cardT">Tarjeta</h2>
+          <p data-t="cardD">Pago seguro con Stripe: tarjeta de crédito o débito, Apple Pay y otros. Recibirás el recibo por correo.</p>
+          <a class="btn btn--cta btn--full js-card" href="#" rel="noopener" data-t="cardBtn">Pagar con tarjeta</a>
+        </article>
+
+        <article class="method">
+          <h2>Zelle</h2>
+          <img class="zelle-qr" src="assets/zelle-qr.jpg" width="400" height="400" alt="Código QR de Zelle · Mindful Wellness & Coaching LLC">
+          <p><span data-t="zelleSend">Envía el total a</span> <strong class="js-zname">Mindful Wellness &amp; Coaching LLC</strong> <span data-t="zelleAt">al</span> <strong class="js-zphone">201-679-9969</strong>.</p>
+          <div class="code">
+            <span data-t="code">Tu código de pago</span>
+            <b class="js-code">MMMG</b>
+            <button type="button" class="copy js-copy" data-t="copy">Copiar</button>
+          </div>
+          <p class="fine" data-t="memo">Escribe este código en la nota del Zelle para que encontremos tu pago.</p>
+          <a class="btn btn--wa btn--full js-wa" href="#" target="_blank" rel="noopener" data-t="waBtn">Ya pagué · Enviar comprobante por WhatsApp</a>
+          <p class="fine" data-t="waNote">Mindful Wellness verifica el Zelle en el banco y te confirma el cupo.</p>
+        </article>
+      </div>
+    </section>
+
+    <p class="fine" style="text-align:center" data-t="english">El taller se imparte completamente en inglés.</p>
+  </main>
+
+  <script src="js/pago-config.js"></script>
+  <script>
+  (function () {
+    var C = window.PAGO_CONFIG;
+    var T = {
+      es: { received: "Solicitud de inscripción recibida", title: "Último paso: el pago",
+        intro: "Tu cupo para My Money, My Goals queda confirmado cuando recibimos el pago. Elige cómo pagar.",
+        workshop: "Taller", when: "Fecha", date: "Sáb. 7 de nov. 2026 · 9:00–11:30 a. m.", kids: "Niños inscritos", total: "Total",
+        big: "Para más de 4 hermanos, escríbenos y te ayudamos con el pago.",
+        cardT: "Tarjeta", cardD: "Pago seguro con Stripe: tarjeta de crédito o débito, Apple Pay y otros. Recibirás el recibo por correo.",
+        cardBtn: "Pagar con tarjeta", zelleSend: "Envía el total a", zelleAt: "al", code: "Tu código de pago", copy: "Copiar", copied: "Copiado",
+        memo: "Escribe este código en la nota del Zelle para que encontremos tu pago.",
+        waBtn: "Ya pagué · Enviar comprobante por WhatsApp", waNote: "Mindful Wellness verifica el Zelle en el banco y te confirma el cupo.",
+        english: "El taller se imparte completamente en inglés.",
+        waMsg: function (code, n, t) { return "Hola Monica 💜 Acabo de pagar por Zelle la inscripción de My Money, My Goals.\nCódigo: " + code + "\nNiños: " + n + "\nTotal: $" + t + "\nTe adjunto el comprobante 👇"; } },
+      en: { received: "Registration request received", title: "Last step: payment",
+        intro: "Your spot for My Money, My Goals is confirmed once we receive payment. Choose how to pay.",
+        workshop: "Workshop", when: "Date", date: "Sat., Nov. 7, 2026 · 9:00–11:30 AM", kids: "Children registered", total: "Total",
+        big: "For more than 4 siblings, contact us and we will help you with payment.",
+        cardT: "Card", cardD: "Secure payment with Stripe: credit or debit card, Apple Pay and more. You will get a receipt by email.",
+        cardBtn: "Pay by card", zelleSend: "Send the total to", zelleAt: "at", code: "Your payment code", copy: "Copy", copied: "Copied",
+        memo: "Write this code in the Zelle memo so we can find your payment.",
+        waBtn: "I paid · Send receipt on WhatsApp", waNote: "Mindful Wellness checks the Zelle in the bank and confirms your spot.",
+        english: "The workshop is taught entirely in English.",
+        waMsg: function (code, n, t) { return "Hi Monica 💜 I just paid by Zelle for the My Money, My Goals registration.\nCode: " + code + "\nChildren: " + n + "\nTotal: $" + t + "\nHere is my receipt 👇"; } }
+    };
+
+    var q = new URLSearchParams(location.search);
+    var n = parseInt(q.get("n"), 10);
+    if (!(n >= 1)) n = 1;
+    // Solo dígitos del número de inscripción de Jotform (nunca datos personales en la URL).
+    var ref = (q.get("ref") || "").replace(/\D/g, "");
+    var code = C.prefijo + "-" + (ref ? ref.slice(-6) : Math.random().toString(36).slice(2, 8).toUpperCase());
+    var total = C.totals[n];
+    var qlang = (q.get("lang") || "").toLowerCase();
+    var lang = qlang.indexOf("en") === 0 ? "en" : (qlang.indexOf("es") === 0 ? "es" : ((navigator.language || "es").toLowerCase().indexOf("en") === 0 ? "en" : "es"));
+
+    function render() {
+      var t = T[lang];
+      document.documentElement.lang = lang;
+      document.querySelectorAll("[data-t]").forEach(function (el) { var k = el.getAttribute("data-t"); if (typeof t[k] === "string") el.textContent = t[k]; });
+      document.querySelectorAll(".lang__btn").forEach(function (b) { b.setAttribute("aria-pressed", String(b.dataset.lang === lang)); });
+      document.querySelector(".js-n").textContent = n;
+      document.querySelector(".js-code").textContent = code;
+      var big = !total;
+      document.querySelector(".js-big").hidden = !big;
+      document.querySelector(".js-total").textContent = big ? "—" : "$" + total;
+      var card = document.querySelector(".js-card");
+      if (big) { card.hidden = true; }
+      else {
+        var u = new URL(C.stripe[n]);
+        u.searchParams.set("client_reference_id", code);
+        u.searchParams.set("locale", lang);
+        card.href = u.toString();
+      }
+      var wa = document.querySelector(".js-wa");
+      wa.href = "https://wa.me/" + C.whatsapp + "?text=" + encodeURIComponent(t.waMsg(code, n, big ? "—" : total));
+    }
+
+    document.querySelectorAll(".lang__btn").forEach(function (b) {
+      b.addEventListener("click", function () { lang = b.dataset.lang; render(); });
+    });
+    document.querySelector(".js-copy").addEventListener("click", function (e) {
+      var btn = e.currentTarget;
+      var done = function () { btn.textContent = T[lang].copied; setTimeout(function () { btn.textContent = T[lang].copy; }, 1800); };
+      if (navigator.clipboard) navigator.clipboard.writeText(code).then(done, function () {});
+    });
+    render();
+  })();
+  </script>
+</body>
+</html>

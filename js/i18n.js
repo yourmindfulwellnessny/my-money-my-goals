@@ -106,11 +106,11 @@
       "faq.who.q": "Who fills out the registration?",
       "faq.who.a": "A parent, guardian or authorized adult. One registration can include several siblings.",
       "faq.confirm.q": "When is my spot confirmed?",
-      "faq.confirm.a": "Submitting the form sends a registration request. We will contact you with payment instructions, and your spot is confirmed once payment is received. If the workshop is full, we will offer you a place on the waitlist.",
+      "faq.confirm.a": "After you submit the form, you can pay right away by card or Zelle. Your spot is confirmed once payment is received. If the workshop is full, we will offer you a place on the waitlist.",
 
       "reg.title": "Registration",
       "reg.openText": "One adult registers the whole family in a few short steps.",
-      "reg.payNote": "After you submit, we will contact you with payment instructions. Your spot is confirmed once payment is received.",
+      "reg.payNote": "After you submit, you will see the payment options: card or Zelle. Your spot is confirmed once payment is received.",
       "reg.closedText": "Registration will open soon.",
 
       "contact.title": "Contact",
@@ -221,11 +221,11 @@
       "faq.who.q": "¿Quién completa la inscripción?",
       "faq.who.a": "Un padre, madre, tutor o adulto autorizado. Una inscripción puede incluir a varios hermanos.",
       "faq.confirm.q": "¿Cuándo queda confirmado el cupo?",
-      "faq.confirm.a": "Al enviar el formulario envías una solicitud de inscripción. Te contactaremos con las instrucciones de pago, y el cupo queda confirmado cuando recibimos el pago. Si el taller está lleno, te ofreceremos un lugar en la lista de espera.",
+      "faq.confirm.a": "Al enviar el formulario puedes pagar enseguida con tarjeta o Zelle. El cupo queda confirmado cuando recibimos el pago. Si el taller está lleno, te ofreceremos un lugar en la lista de espera.",
 
       "reg.title": "Inscripción",
       "reg.openText": "Un adulto inscribe a toda la familia en pocos pasos.",
-      "reg.payNote": "Después de enviar el formulario te contactaremos con las instrucciones de pago. El cupo queda confirmado cuando recibimos el pago.",
+      "reg.payNote": "Al enviar el formulario verás las opciones de pago: tarjeta o Zelle. El cupo queda confirmado cuando recibimos el pago.",
       "reg.closedText": "Las inscripciones abrirán muy pronto.",
 
       "contact.title": "Contacto",
