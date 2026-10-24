@@ -50,9 +50,9 @@
 
     <section class="pay-card pay-head">
       <img src="assets/mindful-wellness-logo.png" width="1674" height="885" alt="Mindful Wellness by Monica V.">
-      <span class="ok" data-t="received">Solicitud de inscripción recibida</span>
+      <span class="ok" data-t="received">Solicitud recibida · falta el pago</span>
       <h1 data-t="title">Último paso: el pago</h1>
-      <p data-t="intro">Tu cupo para My Money, My Goals quedará confirmado cuando recibamos el pago. Elige cómo pagar.</p>
+      <p data-t="intro">Tu inscripción se completa solo con el pago: apartamos cupo únicamente a las familias que ya pagaron. Elige cómo pagar.</p>
     </section>
 
     <section class="pay-card">
@@ -95,8 +95,8 @@
   (function () {
     var C = window.PAGO_CONFIG;
     var T = {
-      es: { received: "Solicitud de inscripción recibida", title: "Último paso: el pago",
-        intro: "Tu cupo para My Money, My Goals quedará confirmado cuando recibamos el pago. Elige cómo pagar.",
+      es: { received: "Solicitud recibida · falta el pago", title: "Último paso: el pago",
+        intro: "Tu inscripción se completa solo con el pago: apartamos cupo únicamente a las familias que ya pagaron. Elige cómo pagar.",
         workshop: "Taller", when: "Fecha", date: "Sábado 7 de noviembre de 2026 · 9:00–11:30 a. m.", kids: "Niños inscritos", total: "Total",
         big: "Si inscribes a más de 4 hermanos, escríbenos y te ayudaremos con el pago.",
         cardT: "Tarjeta", cardD: "Pago seguro con Stripe: tarjeta de crédito o débito, Apple Pay y otros medios. Recibirás el recibo por correo electrónico.",
@@ -105,8 +105,8 @@
         waBtn: "Ya pagué · Enviar comprobante por WhatsApp", waNote: "Mindful Wellness verificará el pago de Zelle en el banco y te confirmará el cupo.",
         english: "El taller se imparte completamente en inglés.",
         waMsg: function (code, n, t) { return "Hola, Mónica 💜 Acabo de pagar por Zelle la inscripción a My Money, My Goals.\nCódigo: " + code + "\nNiños: " + n + "\nTotal: $" + t + "\nAdjunto el comprobante 👇"; } },
-      en: { received: "Registration request received", title: "Last step: payment",
-        intro: "Your spot for My Money, My Goals is confirmed once we receive payment. Choose how to pay.",
+      en: { received: "Request received · payment pending", title: "Last step: payment",
+        intro: "Your registration is complete only after payment: we hold spots only for paid registrations. Choose how to pay.",
         workshop: "Workshop", when: "Date", date: "Sat., Nov. 7, 2026 · 9:00–11:30 AM", kids: "Children registered", total: "Total",
         big: "For more than 4 siblings, contact us and we will help you with payment.",
         cardT: "Card", cardD: "Secure payment with Stripe: credit or debit card, Apple Pay and more. You will get a receipt by email.",
