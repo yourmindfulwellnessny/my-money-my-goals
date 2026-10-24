@@ -158,6 +158,10 @@
       var done = function () { btn.textContent = T[lang].copied; setTimeout(function () { btn.textContent = T[lang].copy; }, 1800); };
       if (navigator.clipboard) navigator.clipboard.writeText(code).then(done, function () {});
     });
+    // Igual que en las cajitas: guarda el pedido para la página de "pago recibido" (mismo navegador)
+    document.querySelector(".js-card").addEventListener("click", function () {
+      try { sessionStorage.setItem("mmmgPago", JSON.stringify({ code: code, n: n, total: total, lang: lang })); } catch (e) {}
+    });
     render();
   })();
   </script>

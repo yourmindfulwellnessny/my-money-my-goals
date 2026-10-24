@@ -12,28 +12,83 @@
   <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
   <style>
-    .done { max-width: 640px; margin: 0 auto; padding: 32px 16px 48px; }
+    .done { max-width: 560px; margin: 0 auto; padding: 32px 16px 48px; }
     .done-card { background: var(--white); border-radius: 28px; box-shadow: var(--shadow); padding: 28px 22px; display: grid; gap: 14px; text-align: center; justify-items: center; }
     .done-card img { width: clamp(150px, 34vw, 200px); }
-    .done-card h1 { font-family: var(--font-fun); color: var(--purple); font-size: clamp(1.7rem, 6vw, 2.3rem); margin: 0; }
-    .done-card hr { width: 100%; border: 0; border-top: 2px solid var(--yellow); margin: 6px 0; }
-    .done-card h2 { font-family: var(--font-fun); color: var(--green); font-size: 1.5rem; margin: 0; }
-    .muted { color: var(--muted); }
+    .done-card h1 { font-family: var(--font-fun); color: var(--purple); font-size: clamp(1.6rem, 6vw, 2.2rem); margin: 0; line-height: 1.15; }
+    .code { background: var(--cream-2); border-radius: 14px; padding: 10px 16px; font: 700 1.2rem var(--font-fun); color: var(--purple); letter-spacing: .04em; }
+    .btn--wa { background: #25D366; color: #073B1E; width: 100%; }
+    .muted { color: var(--muted); margin: 0; }
+    .lang-row { display: flex; justify-content: flex-end; margin-bottom: 12px; }
   </style>
 </head>
 <body>
   <main class="done">
+    <div class="lang-row">
+      <div class="lang" role="group" aria-label="Idioma / Language" style="background:var(--purple)">
+        <button type="button" class="lang__btn" data-lang="es" aria-pressed="true">ES</button>
+        <button type="button" class="lang__btn" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+    </div>
     <section class="done-card">
       <img src="assets/mindful-wellness-logo.png" width="1674" height="885" alt="Mindful Wellness by Monica V.">
-      <h1>¡Gracias! Tu pago con tarjeta se procesó</h1>
-      <p>Stripe te enviará el recibo por correo electrónico. Mindful Wellness &amp; Coaching confirmará tu cupo para <strong>My Money, My Goals</strong> (sábado 7 de noviembre de 2026, 9:00–11:30 a. m., Wallington, NJ) y te enviará la dirección exacta.</p>
-      <p class="muted">El taller se imparte completamente en inglés.</p>
-      <hr>
-      <h2>Thank you! Your card payment went through</h2>
-      <p>Stripe will email you a receipt. Mindful Wellness &amp; Coaching will confirm your spot for <strong>My Money, My Goals</strong> (Saturday, November 7, 2026, 9:00–11:30 AM, Wallington, NJ) and send you the exact address.</p>
-      <p class="muted">The workshop is taught entirely in English.</p>
-      <a class="btn btn--cta" href="./">My Money, My Goals</a>
+      <h1 data-t="title">¡Gracias! Tu pago con tarjeta se procesó</h1>
+      <div class="code js-code" hidden></div>
+      <p data-t="body">Último paso: confírmanos tu pago por WhatsApp. Así reservamos el cupo y te enviamos la dirección exacta.</p>
+      <a class="btn btn--wa js-wa" href="#" data-t="waBtn">Confirmar mi inscripción por WhatsApp</a>
+      <p class="muted js-count"></p>
+      <p class="muted" data-t="receipt">Stripe también te enviará el recibo por correo electrónico. El taller se imparte completamente en inglés.</p>
     </section>
   </main>
+
+  <script src="js/pago-config.js"></script>
+  <script>
+  (function () {
+    var C = window.PAGO_CONFIG;
+    var o = null;
+    try { o = JSON.parse(sessionStorage.getItem("mmmgPago") || "null"); } catch (e) {}
+    var q = new URLSearchParams(location.search);
+    var lang = (q.get("lang") || (o && o.lang) || "es").indexOf("en") === 0 ? "en" : "es";
+    var T = {
+      es: { title: "¡Gracias! Tu pago con tarjeta se procesó",
+        body: "Último paso: confírmanos tu pago por WhatsApp. Así reservamos el cupo y te enviamos la dirección exacta.",
+        waBtn: "Confirmar mi inscripción por WhatsApp",
+        receipt: "Stripe también te enviará el recibo por correo electrónico. El taller se imparte completamente en inglés.",
+        count: function (s) { return "Te llevamos a WhatsApp en " + s + " s…"; }, fallback: "¿No se abrió? Toca el botón verde.",
+        msg: function () {
+          var l = ["Hola, Mónica 💜 Acabo de pagar con tarjeta la inscripción a My Money, My Goals."];
+          if (o) { l.push("• Código: " + o.code, "• Niños: " + o.n, "• Total: $" + o.total); }
+          l.push("Mi nombre es:"); return l.join("\n"); } },
+      en: { title: "Thank you! Your card payment went through",
+        body: "Last step: confirm your payment with us on WhatsApp. That is how we reserve your spot and send you the exact address.",
+        waBtn: "Confirm my registration on WhatsApp",
+        receipt: "Stripe will also email you a receipt. The workshop is taught entirely in English.",
+        count: function (s) { return "Taking you to WhatsApp in " + s + " s…"; }, fallback: "Didn't open? Tap the green button.",
+        msg: function () {
+          var l = ["Hi Mónica 💜 I just paid by card for the My Money, My Goals registration."];
+          if (o) { l.push("• Code: " + o.code, "• Children: " + o.n, "• Total: $" + o.total); }
+          l.push("My name is:"); return l.join("\n"); } }
+    };
+    var timer = null, n = 8;
+    function render() {
+      var t = T[lang];
+      document.documentElement.lang = lang;
+      document.querySelectorAll("[data-t]").forEach(function (el) { var k = el.getAttribute("data-t"); if (typeof t[k] === "string") el.textContent = t[k]; });
+      document.querySelectorAll(".lang__btn").forEach(function (b) { b.setAttribute("aria-pressed", String(b.dataset.lang === lang)); });
+      var c = document.querySelector(".js-code");
+      if (o && o.code) { c.hidden = false; c.textContent = o.code; }
+      document.querySelector(".js-wa").href = "https://wa.me/" + C.whatsapp + "?text=" + encodeURIComponent(t.msg());
+      document.querySelector(".js-count").textContent = timer ? t.count(n) : t.fallback;
+    }
+    document.querySelectorAll(".lang__btn").forEach(function (b) {
+      b.addEventListener("click", function () { lang = b.dataset.lang; if (timer) { clearInterval(timer); timer = null; } render(); });
+    });
+    timer = setInterval(function () {
+      n--; render();
+      if (n <= 0) { clearInterval(timer); timer = null; render(); location.href = document.querySelector(".js-wa").href; }
+    }, 1000);
+    render();
+  })();
+  </script>
 </body>
 </html>
